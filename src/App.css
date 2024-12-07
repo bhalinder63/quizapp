@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* App Container */
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(
+    90deg,
+    rgba(84, 81, 139, 1) 0%,
+    rgba(74, 187, 210, 1) 81%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  font-family: "Arial", sans-serif; /* Added a default font */
+  color: #ffffff; /* Ensure text contrasts with the background */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Content Container */
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 30px;
+  align-items: center; /* Center content horizontally */
+  max-width: 500px; /* Constrain width for better readability */
+  padding: 20px; /* Add some padding around content */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.2
+  ); /* Subtle background for better visibility */
+  border-radius: 10px; /* Smooth corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.container ul {
+  width: 100%;
+}
+/* Remove List Styles */
+.container li {
+  list-style: none;
+  padding: 10px 15px; /* Add padding for spacing */
+  margin-top: 10px;
+  border-radius: 5px; /* Rounded corners */
+  color: #ffffff; /* Text color */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Heading Styles */
+.container h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: bold; /* Make heading stand out */
+}
+
+/* Button Styles */
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4abbd2; /* Match gradient colors */
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth hover effects */
+}
+
+button:hover {
+  background-color: #005f73; /* Darken on hover */
+  transform: scale(1.05); /* Slightly enlarge */
+}
+
+button:active {
+  transform: scale(0.95); /* Shrink slightly when clicked */
+}
+
+.alert {
+  position: absolute;
+  top: -50px;
+  color: #ffbf00;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.score {
+  font-size: 35px;
 }
